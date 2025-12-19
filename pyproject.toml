@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "muninn-mtg"
+version = "1.0"
+license = "BSD-3-Clause"
+authors = [{name = "S[&]T"}]
+description = "Muninn extension for 'EUMETSAT Meteosat Third Generation' (MTG) products"
+dependencies = [ "muninn" ]
+
+[tool.setuptools]
+py-modules = ["muninn_mtg"]
