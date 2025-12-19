@@ -42,7 +42,6 @@ MUNINN_PRODUCT_TYPES = [
     'UVN-2-O3-TSC',
     'UVN-2-RI-ECA',
     'UVN-2-SO2',
-
 ]
 
 
