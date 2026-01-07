@@ -31,6 +31,7 @@ def namespace(name):
 MUNINN_PRODUCT_TYPES = [
     'UVN-1B-EARTH-NIR',
     'UVN-1B-EARTH-UVVIS',
+    'UVN-1B-IRR',
     'UVN-2-ALH',
     'UVN-2-AUI',
     'UVN-2-CLD',
