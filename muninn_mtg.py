@@ -54,6 +54,7 @@ class MTGProduct(object):
         self.product_type = product_type
         self.path_prefix = path_prefix
         locationindicator = "-".join([r"(?P<country>.{2})", r"(?P<organisation>[a-zA-Z]+)", r"(?P<location>[a-zA-Z]+)"])
+        locationindicator += "-*"  # allow for trailing '-'
         components = product_type.split("-")
         if len(components) == 3:
             components.append("")
