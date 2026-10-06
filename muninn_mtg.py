@@ -3,7 +3,7 @@ import re
 from datetime import datetime
 
 from muninn.struct import Struct
-from muninn.schema import Mapping, Text
+from muninn.schema import Integer, Mapping, Text
 
 
 # Namespaces
@@ -16,6 +16,8 @@ class MTGNamespace(Mapping):
     environment = Text(index=True)  # OPE|VAL|IV|DEV|REP
     disposition_mode = Text(index=True)  # T|t|C|c|O|o|V|v
     processing_mode = Text(index=True)  # N|F|R|V|B
+    repeat_cycle_in_day = Integer(index=True)
+    count_in_repeat_cycle = Integer(index=True)
 
 
 def namespaces():
@@ -149,6 +151,8 @@ class MTGProduct(object):
         mtg.environment = name_attrs['environment']
         mtg.disposition_mode = name_attrs['disposition_mode']
         mtg.processing_mode = name_attrs['processing_mode']
+        mtg.repeat_cycle_in_day = int(name_attrs['repeat_cycle_in_day'])
+        mtg.count_in_repeat_cycle = int(name_attrs['count_in_repeat_cycle'])
 
         return properties
 
